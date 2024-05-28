@@ -3,6 +3,9 @@ using ProjectLawyer.Domain.Enum;
 
 namespace ProjectLawyer.Domain.Entity
 {
+    /// <summary>
+    /// Entidade Cliente
+    /// </summary>
     public class Client : EntityBase
     {
         public string? Name { get; set; }
@@ -13,5 +16,8 @@ namespace ProjectLawyer.Domain.Entity
         public string? Rg_Ie { get; set; }
         public string? Notes { get; set; }
         public TypePerson TypePerson { get; set; }
+
+        public long CityId { get; set; }
+        public virtual City City { get; set; }
     }
 }
